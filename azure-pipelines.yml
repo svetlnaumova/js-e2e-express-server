@@ -3,15 +3,21 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+resources:
+  containers:
+    - container: cfcli
+      image: 'ppiper/cf-cli'
+      options: --user 0:0 --privileged
 trigger:
-- main
+  - main
 
-pool:
-  vmImage: node
-
-steps:
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+stages:
+  - stage: 'Random'
+    displayName: 'Something'
+    jobs:
+      - job: 'Install'
+        displayName: 'Local test'
+        steps:
+          - bash: 'npm install'
+            displayName: 'Install dependencies'
+          - bash: 'npm run build'
