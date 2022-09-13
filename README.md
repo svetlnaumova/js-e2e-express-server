@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/svetlnnaumova/Unicorn%20project/_apis/build/status/svetlnaumova.js-e2e-express-server?branchName=main)](https://dev.azure.com/svetlnnaumova/Unicorn%20project/_build/latest?definitionId=1&branchName=main)
+
 ---
 page_type: sample
 languages:
