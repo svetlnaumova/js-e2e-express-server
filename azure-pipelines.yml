@@ -21,3 +21,4 @@ stages:
           - bash: 'npm install'
             displayName: 'Install dependencies'
           - bash: 'npm run build'
+            displayName: 'Build'
